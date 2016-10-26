@@ -13,6 +13,21 @@ this.postMessage = function(myMessage){
     data: {message: myMessage}
   });
 };
+this.postCookie = function(){
+  return $http({
+    method:'POST',
+    url: "http://practiceapi.devmounta.in/api/cookies"
+  });
+};
+this.getCookie = function(){
+  return $http({
+    method:'GET',
+    url: "http://practiceapi.devmounta.in/api/cookies"
+  });
+};
+
+
+
   //Here you'll need to create two methods. One called postMessage and the other called getMessages.
 
   //On the lines below create a getMessages method. This method will retrieve data from the backend.

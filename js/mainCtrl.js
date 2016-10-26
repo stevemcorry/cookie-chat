@@ -11,7 +11,11 @@ $scope.postMessage = function(message){
   messageService.postMessage(message);
   $scope.message = '';
 };
-
+$scope.getCookie = function(){
+  messageService.getCookie().then(function(response) {
+    $scope.cookies = response.data;
+  });
+};
 
 
   //The postMessage function will take whatever the user typed in (hint: look at the html and see what ng-model correlates to on the input box),

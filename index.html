@@ -13,7 +13,9 @@
       </form>
       <div class="messages-container">
         <p ng-repeat="message in messages ">
-          {{message.message}} </p>
+          {{message.message}}<br> - {{message.cookie}}
+          Created at {{message.createdAt.slice(11,(createdAt.length()-5))}}</p>
+          {{cookies.cookies}}
       </div>
     </div>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
